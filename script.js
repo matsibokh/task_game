@@ -1,51 +1,39 @@
-var size=100;
-
 function game(){
 
+	//оголошуємо змінні 
+	//створюємо масив зі значеннями
+	var size=100;
+    var arr = ['#FF0000','#FF0000','#FF009E','#FF009E','#9100FF','#9100FF','#0000FF','#0000FF','#00FFFC','#00FFFC','#09FF00','#09FF00','#E2FF00','#E2FF00','#FF5100','#FF5100'];
+    var e = [['#FF0000','#FF0000','#FF009E','#FF009E'],['#9100FF','#9100FF','#0000FF','#0000FF'],['#00FFFC','#00FFFC','#09FF00','#09FF00'],['#E2FF00','#E2FF00','#FF5100','#FF5100']];
+
 	//малюємо доску
-	var bord = document.getElementById("bord");
-	var ctx = bord.getContext('2d');
+	var bord = document.getElementById('bord');
+	var ctx  = bord.getContext('2d');
 	ctx.fillRect(0, 0, bord.width, bord.height);
 	
-	//малюємо ячейки
-	this.draw=function(){
-		for(var i=0; i<4; i++){
-			for(var j=0; j<4; j++){
-				ctx.fillStyle="black";
-				ctx.fillRect(i*size,j*size,99,99);
-			}
-		}
-	};
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 	//рахуємо кліки
 	this.onclick=function(){
 		clicks++;
@@ -75,15 +63,10 @@ function game(){
 		for(var i=0; i<4; i++){
 			for(var j=0; j<4; j++){
 				n++
-				ctx.fillStyle="#EED5B7";
 				ctx.font = "italic bold 48px sans-serif";
-				ctx.fillText(arr1[n], i * size + size / 4, j * size + size / 1.5);
+				ctx.fillStyle(e[j], i * size + size / 4, j * size + size / 1.5);
 							
-				if(arr1[n]===0){
-					ctx.fillStyle="black";
-					ctx.fillRect(i*size,j*size,99,99);
-					var nu=n;
-				}	
+				
 			}
 		}
 	};
