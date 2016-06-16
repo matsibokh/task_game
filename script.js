@@ -8,10 +8,27 @@ var bord = document.getElementById('bord');
 var ctx = bord.getContext('2d');
 ctx.fillRect(0,0,bord.width,bord.height);
 
+//малюєм сірі ячейки
 for (var i=0; i<4; i++){
 	for (var j=0; j<4; j++){
-		ctx.fillStyle= arr[n];
+		ctx.fillStyle='#D3D3D3';
+		ctx.fillRect(i*size, j*size, 99, 99);
+	}	
+}
+
+/*                         функція що рамдомно перемішує кольори і малює їх на дошці. 
+//рамдомнні числа
+function getRandom(a,b){
+			return Math.random()-0.5;
+		}
+
+var arr1=arr.sort(getRandom);
+
+for (var i=0; i<4; i++){
+	for (var j=0; j<4; j++){
+		ctx.fillStyle= arr1[n];
 		ctx.fillRect(i*size, j*size, 99, 99);
 		n++;
 	}	
 }
+*/
